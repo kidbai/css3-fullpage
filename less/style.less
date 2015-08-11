@@ -1,0 +1,1140 @@
+/* init-start */
+@font-face {
+    font-family: FZLT;
+    src: url(../font/FZLTXHK.TTF);
+}
+body {
+    background: #fff;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 0;
+    outline: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    font-family: FZLT, STHeiti, Helvetica, Georgia, 'Hiragino Sans GB', Arial, 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
+    outline: none;
+}
+/* init-end */
+
+.text-center {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+/* navigation-start */
+
+@logoWidth: 50px;
+@logoHeight: 50px;
+.navigation {
+    width: 100%;
+    height: 60px;
+    padding: 0px 15%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+    opacity: .8;
+    .logo {
+        position: relative;
+        width: @logoWidth;
+        height: 60px;
+        background-image: url(../img/app_icon_80.png);
+        background-size: @logoWidth @logoHeight;
+        background-position: center;
+        background-repeat: no-repeat;
+        float: left;
+    }
+    .app-name {
+        position: relative;
+        float: left;
+        width: 100px;
+        height: @logoHeight;
+        font-size: 25px;
+        color: #757575;
+        line-height: 60px;
+        padding: 0px 5px;
+    }
+}
+
+#fp-nav li {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    a span {
+        width: 11px;
+        height: 11px;
+        text-align: center;
+        border: 1px solid #fff;
+    }
+    a.active span {
+        background-color: #fff;
+    }
+}
+/* navigation-end */
+
+/* section-start */
+
+.section:nth-child(1) {
+    background-color: #e36b61;
+}
+
+.section:nth-child(2) {
+    background-color: #f5d371;
+}
+
+.section:nth-child(3) {
+    background-color: #8bbe75;
+}
+
+.section:nth-child(4) {
+    background-color: #88abe8;
+}
+
+.section:nth-child(5) {
+    background-color: #9b6db7;
+}
+
+.section:nth-child(6) {
+    background-color: #f5a071;
+}
+
+.section:nth-child(7) {
+    background-color: #7890cd;
+}
+
+/* section-end */
+
+@phoneWidth: 292px;
+@middleSubBlockWidthHeight: 140px;
+
+.section {
+    position: relative;
+    .block {
+        position: relative;
+        width: 960px;
+        height: 500px;
+        margin: 0 auto;
+        .wrapper{
+            position: relative;
+            width: 500px;
+            height: 60%;
+            .phone {
+                position: absolute;
+                width: @phoneWidth;
+                height: 518px;
+                background-image: url(../img/section1/banner1_phone.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                top: 520px;
+                left: 120px;
+                z-index: 0;
+                -webkit-animation: phone-down 1s ease;
+                -moz-animation: phone-down 1s ease;
+                -ms-animation: phone-down 1s ease;
+                animation: phone-down 1s ease;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .phone.start-animation {
+                -webkit-animation: phone-up 1s ease 500ms;
+                -moz-animation: phone-up 1s ease 500ms;
+                -ms-animation: phone-up 1s ease 500ms;
+                animation: phone-up 1s ease 500ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .left-top-icon {
+                position: absolute;
+                top: 95px;
+                left: -53px;
+                width: 134px;
+                height: 120px;
+                z-index: 1;
+                .piston-wrapper {
+                    position: absolute;
+                    width: 134px;
+                    height: 120px;
+                    background-image: url(../img/section1/banner1_img_left_top.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 4;
+                }
+                .piston-body {
+                    position: absolute;
+                    width: 20px + (@phoneWidth - 20px) / 2 + 6px;
+                    height: 20px;
+                    background-color: #485e72;
+                    left: 134px;
+                    top: 50px;
+                    z-index: 3;
+                    
+                    .piston-tail {
+                        position: absolute;
+                        width: 20px;
+                        height: 65px;
+                        background-image: url(../img/section1/piston-tail-left.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        top: -22.5px;
+                        right: -20px;
+                        z-index: 2;
+                    }
+                }
+                .piston-body.start-animation {
+                    -webkit-animation: piston-open 1s ease 500ms;
+                    -moz-animation: piston-open 1s ease 500ms;
+                    -ms-animation: piston-open 1s ease 500ms;
+                    animation: piston-open 1s ease 500ms;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-body.piston-close {
+                    -webkit-animation: piston-close 1s ease;
+                    -moz-animation: piston-close 1s ease;
+                    -ms-animation: piston-close 1s ease;
+                    animation: piston-close 1s ease;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-gear {
+                    position: absolute;
+                    width: 156px;
+                    height: 156px;
+                    top: -18px;
+                    left: -18px;
+                    background-image: url(../img/section1/banner1_img_left_top_gear.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    -moz-animation: rotation 2s linear infinite;
+                    -webkit-animation: rotation 2s linear infinite;
+                    -ms-animation: rotation 2s linear infinite;
+                    animation: rotation 2s linear infinite;
+                }
+            }
+            .left-down-icon {
+                position: absolute;
+                top: 335px;
+                left: -53px;
+                width: 134px;
+                height: 120px;
+                z-index: 1;
+                .piston-wrapper {
+                    position: absolute;
+                    width: 134px;
+                    height: 120px;
+                    background-image: url(../img/section1/banner1_img_left_down.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 4;
+                }
+                .piston-body {
+                    position: absolute;
+                    width: 20px + (@phoneWidth - 20px) / 2 + 6px;
+                    height: 20px;
+                    background-color: #485e72;
+                    left: 134px;
+                    top: 50px;
+                    z-index: 3;
+                    .piston-tail {
+                        position: absolute;
+                        width: 20px;
+                        height: 65px;
+                        background-image: url(../img/section1/piston-tail-left.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        top: -22.5px;
+                        right: -20px;
+                        z-index: 2;
+                    }
+                }
+                .piston-body.start-animation {
+                    -webkit-animation: piston-open 1s ease;
+                    -moz-animation: piston-open 1s ease;
+                    -ms-animation: piston-open 1s ease;
+                    animation: piston-open 1s ease;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-body.piston-close {
+                    -webkit-animation: piston-close 1s ease;
+                    -moz-animation: piston-close 1s ease;
+                    -ms-animation: piston-close 1s ease;
+                    animation: piston-close 1s ease;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-gear {
+                    position: absolute;
+                    width: 156px;
+                    height: 156px;
+                    top: -18px;
+                    left: -18px;
+                    background-image: url(../img/section1/banner1_img_left_down_gear.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    -moz-animation: rotation 2s linear infinite;
+                    -webkit-animation: rotation 2s linear infinite;
+                    -ms-animation: rotation 2s linear infinite;
+                    animation: rotation 2s linear infinite;
+                }
+            }
+            .right-top-icon {
+                position: absolute;
+                top: 95px;
+                right: -52px;
+                width: 134px;
+                height: 120px;
+                z-index: 1;
+                .piston-wrapper {
+                    position: absolute;
+                    width: 134px;
+                    height: 120px;
+                    background-image: url(../img/section1/banner1_img_right_top.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 4;
+                    left: 23px;
+                }
+                .piston-body {
+                    position: absolute;
+                    width: 20px + (@phoneWidth - 20) / 2 + 6px;
+                    height: 20px;
+                    background-color: #485e72;
+                    z-index: 3;
+                    right: 111px;
+                    top: 50px;
+                    .piston-tail {
+                        position: absolute;
+                        width: 20px;
+                        height: 65px;
+                        background-image: url(../img/section1/piston-tail-right.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        top: -22.5px;
+                        left: -20px;
+                        z-index: 2;
+                    }
+                }
+                .piston-body.start-animation {
+                    -webkit-animation: piston-open 1s ease 500ms;
+                    -moz-animation: piston-open 1s ease 500ms;
+                    -ms-animation: piston-open 1s ease 500ms;
+                    animation: piston-open 1s ease 500ms;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-body.piston-close {
+                    -webkit-animation: piston-close 1s ease;
+                    -moz-animation: piston-close 1s ease;
+                    -ms-animation: piston-close 1s ease;
+                    animation: piston-close 1s ease;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-gear {
+                    position: absolute;
+                    width: 156px;
+                    height: 156px;
+                    top: -18px;
+                    left: 18px;
+                    background-image: url(../img/section1/banner1_img_right_top_gear.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    -moz-animation: rotation 2s linear infinite;
+                    -webkit-animation: rotation 2s linear infinite;
+                    -ms-animation: rotation 2s linear infinite;
+                    animation: rotation 2s linear infinite;
+                }
+            }
+            .right-down-icon {
+                position: absolute;
+                top: 335px;
+                right: -52px;
+                width: 134px;
+                height: 120px;
+                z-index: 1;
+                .piston-wrapper {
+                    position: absolute;
+                    width: 134px;
+                    height: 120px;
+                    background-image: url(../img/section1/banner1_img_right_down.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 4;
+                    left: 23px;
+                }
+                .piston-body {
+                    position: absolute;
+                    width: 20px + (@phoneWidth - 20px) / 2 + 6px;
+                    height: 20px;
+                    background-color: #485e72;
+                    z-index: 3;
+                    right: 111px;
+                    top: 50px;
+                    .piston-tail {
+                        position: absolute;
+                        width: 20px;
+                        height: 65px;
+                        background-image: url(../img/section1/piston-tail-right.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        top: -22.5px;
+                        left: -20px;
+                        z-index: 2;
+                    }
+                }
+                .piston-body.start-animation {
+                    -webkit-animation: piston-open 1s ease;
+                    -moz-animation: piston-open 1s ease;
+                    -ms-animation: piston-open 1s ease;
+                    animation: piston-open 1s ease;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-body.piston-close {
+                    -webkit-animation: piston-close 1s ease;
+                    -moz-animation: piston-close 1s ease;
+                    -ms-animation: piston-close 1s ease;
+                    animation: piston-close 1s ease;
+                    -webkit-animation-fill-mode: both;
+                    -moz-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+                .piston-gear {
+                    position: absolute;
+                    width: 156px;
+                    height: 156px;
+                    top: -18px;
+                    left: 18px;
+                    background-image: url(../img/section1/banner1_img_right_down_gear.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    -moz-animation: rotation 2s linear infinite;
+                    -webkit-animation: rotation 2s linear infinite;
+                    -ms-animation: rotation 2s linear infinite;
+                    animation: rotation 2s linear infinite;
+                }
+            }
+        }
+
+        .middle {
+            position: relative;
+            width: 411px;
+            height: 370px;
+            background-image: url(../img/section2/banner2_middle.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 200px;
+            opacity: 0;
+            .bulb {
+                opacity: 0;
+                width: @middleSubBlockWidthHeight;
+                height: @middleSubBlockWidthHeight;
+                position: absolute;
+                bottom: -107px;
+                left: -60px;
+                background-image: url(../img/section2/banner2_bulb.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .bulb.sub-middle.start-animation {
+                opacity: 1;
+                -webkit-animation: show-middle 1s ease 200ms;
+                -moz-animation: show-middle 1s ease 200ms;
+                -ms-animation: show-middle 1s ease 200ms;
+                animation: show-middle 1s ease 200ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .car {
+                opacity: 0;
+                width: @middleSubBlockWidthHeight;
+                height: @middleSubBlockWidthHeight;
+                position: absolute;
+                top: 60px;
+                left: -140px;
+                background-image: url(../img/section2/banner2_car.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .car.sub-middle.start-animation {
+                opacity: 1;
+                -webkit-animation: show-middle 1s ease 400ms;
+                -moz-animation: show-middle 1s ease 400ms;
+                -ms-animation: show-middle 1s ease 400ms;
+                animation: show-middle 1s ease 400ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .house {
+                opacity: 0;
+                width: @middleSubBlockWidthHeight;
+                height: @middleSubBlockWidthHeight;
+                position: absolute;
+                top: -140px;
+                right: 130px;
+                background-image: url(../img/section2/banner2_house.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .house.sub-middle.start-animation {
+                opacity: 1;
+                -webkit-animation: show-middle 1s ease 600ms;
+                -moz-animation: show-middle 1s ease 600ms;
+                -ms-animation: show-middle 1s ease 600ms;
+                animation: show-middle 1s ease 600ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .trash {
+                opacity: 0;
+                width: @middleSubBlockWidthHeight;
+                height: @middleSubBlockWidthHeight;
+                position: absolute;
+                top: 60px;
+                right: -140px;
+                background-image: url(../img/section2/banner2_trash.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .trash.sub-middle.start-animation {
+                opacity: 1;
+                -webkit-animation: show-middle 1s ease 800ms;
+                -moz-animation: show-middle 1s ease 800ms;
+                -ms-animation: show-middle 1s ease 800ms;
+                animation: show-middle 1s ease 800ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .more {
+                opacity: 0;
+                width: @middleSubBlockWidthHeight;
+                height: @middleSubBlockWidthHeight;
+                position: absolute;
+                bottom: -107px;
+                right: -42px;
+                background-image: url(../img/section2/banner2_more.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .more.sub-middle.start-animation {
+                opacity: 1;
+                -webkit-animation: show-middle 1s ease 1s;
+                -moz-animation: show-middle 1s ease 1s;
+                -ms-animation: show-middle 1s ease 1s;
+                animation: show-middle 1s ease 1s;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .sub-middle.hide-middle {
+                -webkit-animation: hide-middle 600ms ease;
+                -moz-animation: hide-middle 600ms ease;
+                -ms-animation: hide-middle 600ms ease;
+                animation: hide-middle 600ms ease;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+        }
+
+        .middle.start-animation {
+            opacity: 1;
+            -webkit-animation: show-middle 600ms ease;
+            -moz-animation: show-middle 600ms ease;
+            -ms-animation: show-middle 600ms ease;
+            animation: show-middle 600ms ease;
+            -webkit-animation-fill-mode: both;
+            -moz-animation-fill-mode: both;
+            -ms-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .middle.hide-middle {
+            opacity: 0;
+            -webkit-animation: hide-middle 600ms ease;
+            -moz-animation: hide-middle 600ms ease;
+            -ms-animation: hide-middle 600ms ease;
+            animation: hide-middle 600ms ease;
+            -webkit-animation-fill-mode: both;
+            -moz-animation-fill-mode: both;
+            -ms-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .fix {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border-radius: 55%;
+            background-color: #759ebe;
+            margin-top: 70px;
+            overflow:hidden;
+            .pipe {
+                width: 500px;
+                height: 500px;
+                border-radius: 55%;
+                background-image: url(../img/section3/banner3_pipe_broken.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .pipe.fixed {
+                background-image: url(../img/section3/banner3_pipe.png);
+                -webkit-animation: shake-pipe 300ms ease;
+                -moz-animation: shake-pipe 300ms ease;
+                -ms-animation: shake-pipe 300ms ease;
+                animation: shake-pipe 300ms ease;
+            }
+            .hand-top {
+                position: absolute;
+                top: -60px;                
+                left: 200px;
+                width: 156px;
+                height: 202px;
+                background-image: url(../img/section3/banner3_wrench.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0;
+                -webkit-animation: hide-top-hand 800ms ease;
+                -moz-animation: hide-top-hand 800ms ease;
+                -ms-animation: hide-top-hand 800ms ease;
+                animation: hide-top-hand 800ms ease;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .hand-top.start-animation {
+                opacity: 1;
+                -webkit-animation: show-top-hand 800ms ease;
+                -moz-animation: show-top-hand 800ms ease;
+                -ms-animation: show-top-hand 800ms ease;
+                animation: show-top-hand 800ms ease;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .hand-left {
+                position: absolute;
+                left: 0;
+                bottom: 100px;
+                width: 142px;
+                height: 173px;
+                background-image: url(../img/section3/banner3_hammer.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0;
+                -webkit-animation: hide-left-hand 800ms ease 200ms;
+                -moz-animation: hide-left-hand 800ms ease 200ms;
+                -ms-animation: hide-left-hand 800ms ease 200ms;
+                animation: hide-left-hand 800ms ease 200ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .hand-left.start-animation {
+                opacity: 1;
+                -webkit-animation: show-left-hand 800ms ease 200ms;
+                -moz-animation: show-left-hand 800ms ease 200ms;
+                -ms-animation: show-left-hand 800ms ease 200ms;
+                animation: show-left-hand 800ms ease 200ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .hand-right {
+                position: absolute;
+                right: 0;
+                bottom: 100px;
+                width: 120px;
+                height: 152px;
+                background-image: url(../img/section3/banner3_ruler.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0;
+                -webkit-animation: hide-right-hand 800ms ease 400ms;
+                -moz-animation: hide-right-hand 800ms ease 400ms;
+                -ms-animation: hide-right-hand 800ms ease 400ms;
+                animation: hide-right-hand 800ms ease 400ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .hand-right.start-animation {
+                opacity: 1;
+                -webkit-animation: show-right-hand 800ms ease 400ms;
+                -moz-animation: show-right-hand 800ms ease 400ms;
+                -ms-animation: show-right-hand 800ms ease 400ms;
+                animation: show-right-hand 800ms ease 400ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+        }
+
+        .visit {
+            position: relative;
+            width: 620px;
+            height: 400px;
+            margin-top: 260px;
+            .left-door {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 150px;
+                height: 330px;
+                background-image: url(../img/section4/banner4_door_left.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                float: left;
+                z-index: 2;
+                -webkit-animation: close-left-door 800ms ease;
+                -moz-animation: close-left-door 800ms ease;
+                -ms-animation: close-left-door 800ms ease;
+                animation: close-left-door 800ms ease;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .left-door.start-animation {
+                -webkit-animation: open-left-door 800ms ease 500ms;
+                -moz-animation: open-left-door 800ms ease 500ms;
+                -ms-animation: open-left-door 800ms ease 500ms;
+                animation: open-left-door 800ms ease 500ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .car {
+                position: absolute;
+                bottom: 0;
+                left: 150px;
+                width: 314px;
+                height: 217px;
+                background-image: url(../img/section4/banner4_car.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                float: left;
+                z-index: 1;
+                opacity: 0;
+                -webkit-animation: car-out 1s ease 800ms;
+                -moz-animation: car-out 1s ease 800ms;
+                -ms-animation: car-out 1s ease 800ms;
+                animation: car-out 1s ease 800ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .car.start-animation {
+                opacity: 1;
+                -webkit-animation: car-in 1s ease 800ms;
+                -moz-animation: car-in 1s ease 800ms;
+                -ms-animation: car-in 1s ease 800ms;
+                animation: car-in 1s ease 800ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .right-door {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 150px;
+                height: 330px;
+                background-image: url(../img/section4/banner4_door_right.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                float: left;
+                z-index: 2;
+                -webkit-animation: close-right-door 800ms ease;
+                -moz-animation: close-right-door 800ms ease;
+                -ms-animation: close-right-door 800ms ease;
+                animation: close-right-door 800ms ease;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .right-door.start-animation {
+                -webkit-animation: open-right-door 800ms ease 500ms;
+                -moz-animation: open-right-door 800ms ease 500ms;
+                -ms-animation: open-right-door 800ms ease 500ms;
+                animation: open-right-door 800ms ease 500ms;
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+        }
+
+        .home {
+            position: relative;
+            width: 881px;
+            height: 439px;
+            .city {
+                position: absolute;
+                width: 750px;
+                height: 439px;
+                background-image: url(../img/section5/banner5_city.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 1;
+                bottom: -73px;
+                right: 260px;
+                opacity: 0;
+                -webkit-animation: city-up 1s ease;
+                -moz-animation: city-up 1s ease;
+                -ms-animation: city-up 1s ease;
+                animation: city-up 1s ease; 
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .city.start-animation {
+                opacity: 1;
+                -webkit-animation: city-fall-down 1s ease 400ms;
+                -moz-animation: city-fall-down 1s ease 400ms;
+                -ms-animation: city-fall-down 1s ease 400ms;
+                animation: city-fall-down 1s ease 400ms; 
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .city-phone {
+                position: absolute;
+                bottom: 0;
+                width: 881px;
+                height: 206px;
+                bottom: -100px;
+                right: 190px;
+                background-image: url(../img/section5/banner5_phone.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 0;
+                -webkit-animation: city-phone-down 1s ease;
+                -moz-animation: city-phone-down 1s ease ;
+                -ms-animation: city-phone-down 1s eases;
+                animation: city-phone-down 1s ease; 
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .city-phone.start-animation {
+                opacity: 1;
+                -webkit-animation: city-phone-up 1s ease 400ms;
+                -moz-animation: city-phone-up 1s ease 400ms;
+                -ms-animation: city-phone-up 1s ease 400ms;
+                animation: city-phone-up 1s ease 400ms; 
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .cloud {
+                position: absolute;
+                width: 713px;
+                height: 213px;
+                right: 300px;
+                background-image: url(../img/section5/banner5_cloud.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 0;
+                -webkit-animation: no-wind 1s ease;
+                -moz-animation: no-wind 1s ease;
+                -ms-animation: no-wind 1s ease;
+                animation: no-wind 1s ease; 
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            .cloud.start-animation {
+                opacity: 1;
+                -webkit-animation: wind 1s ease 1s;
+                -moz-animation: wind 1s ease 1s;
+                -ms-animation: wind 1s ease 1s;
+                animation: wind 1s ease 1s; 
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+        }
+
+        .guide {
+            position: relative;
+            width: 580px;
+            height: 320px;
+            background-image: url(../img/section6/banner6_bg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 280px;
+            .icon-1 {
+                position: absolute;
+                top: -100px;
+                left: 40px;
+                width: 132px;
+                height: 161px;
+                background-image: url(../img/section6/banner6_img1.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .icon-1.icon.start-animation {
+                -webkit-animation: jelly 1s ease 500ms;
+                -moz-animation: jelly 1s ease 500ms;
+                -ms-animation: jelly 1s ease 500ms;
+                animation: jelly 1s ease 500ms;
+            }
+            .icon-2 {
+                position: absolute;
+                top: 30px;
+                left: 133px;
+                width: 99px;
+                height: 121px;
+                background-image: url(../img/section6/banner6_img2.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .icon-2.icon.start-animation {
+                -webkit-animation: jelly 1s ease 700ms;
+                -moz-animation: jelly 1s ease 700ms;
+                -ms-animation: jelly 1s ease 700ms;
+                animation: jelly 1s ease 700ms;
+            }
+            .icon-3 {
+                position: absolute;
+                top: -70px;
+                left: 205px;
+                width: 114px;
+                height: 140px;
+                background-image: url(../img/section6/banner6_img3.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .icon-3.icon.start-animation {
+                -webkit-animation: jelly 1s ease 900ms;
+                -moz-animation: jelly 1s ease 900ms;
+                -ms-animation: jelly 1s ease 900ms;
+                animation: jelly 1s ease 900ms;
+            }
+            .icon-4 {
+                position: absolute;
+                top: 100px;
+                left: 300px;
+                width: 71px;
+                height: 88px;
+                background-image: url(../img/section6/banner6_img4.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .icon-4.icon.start-animation {
+                -webkit-animation: jelly 1s ease 1100ms;
+                -moz-animation: jelly 1s ease 1100ms;
+                -ms-animation: jelly 1s ease 1100ms;
+                animation: jelly 1s ease 1100ms;
+            }
+            .icon-5 {
+                position: absolute;
+                top: -20px;
+                left: 363px;
+                width: 100px;
+                height: 123px;
+                background-image: url(../img/section6/banner6_img5.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .icon-5.icon.start-animation {
+                -webkit-animation: jelly 1s ease 1300ms;
+                -moz-animation: jelly 1s ease 1300ms;
+                -ms-animation: jelly 1s ease 1300ms;
+                animation: jelly 1s ease 1300ms;
+            }
+            .icon-6 {
+                position: absolute;
+                top: 60px;
+                left: 446px;
+                width: 88px;
+                height: 109px;
+                background-image: url(../img/section6/banner6_img6.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .icon-6.icon.start-animation {
+                -webkit-animation: jelly 1s ease 1500ms;
+                -moz-animation: jelly 1s ease 1500ms;
+                -ms-animation: jelly 1s ease 1500ms;
+                animation: jelly 1s ease 1500ms;
+            }
+        }
+
+        .expect {
+            position: relative; 
+            width: 500px;
+            height: 500px;
+            margin-top: 280px;
+            margin-left: 130px;
+            .girl {
+                position: relative;
+                width: 237px;
+                height: 329px;
+                background-image: url(../img/section7/banner7_girl.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .text {
+                position: absolute;
+                text-align: center;
+                top: 100px;
+                right: -80px;
+                p {
+                }
+                p:nth-child(1) {
+                    color: #fff;
+                    line-height: 70px;
+                    font-size: 20px;
+                }
+
+                p:nth-child(2) {
+                    color: #e8ecf6;
+                    font-size: 18px;
+                }
+                
+            }
+        }
+    }
+}
+
+
+    
+
+
+.qrcode-wrapper {
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    z-index: 1;
+    width: 340px;
+    height: 600px;
+    margin-top: -240px;
+    opacity: 1;
+    -webkit-animation: show-qrcode 1s ease;
+    -moz-animation: show-qrcode 1s ease;
+    -ms-animation: show-qrcode 1s ease;
+    animation: show-qrcode 1s ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+    p.qrcode-title {
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+    }
+    p.qrcode-subtitle {
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+    }
+    span {
+        font-size: 17px;
+        color: #fff;
+        line-height: 40px;
+    }
+    .qrcode {
+        position: relative;
+        padding-top: 200px;
+        width: 326px;
+        height: 398px;
+        margin: 0 auto;
+        background-image: url(../img/section1/qrcode.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 280px 350px;
+        .qrcode-ios {
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 235px;
+            height: 66px;
+            background-image: url(../img/section1/qrcode_ios.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .qrcode-android {
+            margin: 0 auto;
+            margin-top: 8px;
+            width: 235px;
+            height: 66px;
+            background-image: url(../img/section1/qrcode_android.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+}
+
+.qrcode-wrapper.hide {
+    opacity: 0;
+    -webkit-animation: hide-qrcode 1s ease;
+    -moz-animation: hide-qrcode 1s ease;
+    -ms-animation: hide-qrcode 1s ease;
+    animation: hide-qrcode 1s ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
